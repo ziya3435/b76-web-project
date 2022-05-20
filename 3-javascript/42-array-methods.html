@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let sonuc="";
+        const sayilar = [23,123,5,42,665,34,87,23,1];
+        console.log(sayilar);
+
+        // dizinin sonuna yeni bir eleman ekler
+        sonuc = sayilar.push(33);
+        console.log(sayilar);
+        console.log(sonuc);
+
+
+        // dizinin sondaki elemanını siler
+        sonuc = sayilar.pop();
+        console.log(sayilar);
+        console.log(sonuc);
+
+        // beliritlen index ten itibaren siler
+        sayilar.splice(6);
+        console.log(sayilar);
+
+        // belirtilen indexten itibaren belirtilen sayı kadar eleman siler
+        sayilar.splice(3, 2 );
+        console.log(sayilar);
+
+        // belirtilen indexten itibaren siler ve eklemeler yapar
+        sayilar.splice(1,1,55,77);
+        console.log(sayilar);
+
+        // belirtilen indexten itibaren silmeden ekleme
+        sayilar.splice(4,0,99);
+        console.log(sayilar);
+
+        // sort default olarak string sıralam yapar
+        sayilar.sort();
+        console.log(sayilar);
+
+        // küçükten büyüğe nümerik sıralama
+        sayilar.sort( function(a,b) {
+            return a-b; // negatif , pozitif, sıfır
+        } )
+        console.log(sayilar);
+
+        // büyükten küçüye nümerik sıralama
+        sayilar.sort( function(a,b) {
+            return b-a; // negatif , pozitif, sıfır
+        } )
+        console.log(sayilar);
+
+        // dizi sıralamasını tersine çevirir.
+        sayilar.reverse();
+        console.log(sayilar);
+
+        // dizide bir elemanın var olup olmadığını kontrol eder. Varsa true yoksa false döner
+        sonuc = sayilar.includes(55);
+        console.log(sonuc);
+        sonuc = sayilar.includes(155);
+        console.log(sonuc);
+
+    </script>
+</body>
+</html>

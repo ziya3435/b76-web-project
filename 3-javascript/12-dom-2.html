@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="baslikSehirler" class="baslik">Şehirler</h1>
+    <ul id="liste">
+        <li>Ankara</li>
+        <li>İstanbul</li>
+        <li class="list-item">İzmir</li>
+    </ul>
+    <div id="name">Adı: <span>Ali Gel</span></div>
+
+    <script>
+        const elName = document.querySelector("#name span");
+        console.log(elName.innerText);
+        alert(`Merhaba ${elName.innerText}`);
+
+        elName.innerText = "Veli Koş";
+    </script>
+
+</body>
+</html>

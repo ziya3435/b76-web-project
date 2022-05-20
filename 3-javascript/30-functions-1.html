@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Say Hello" onclick="sayHello()">
+    <br>
+    
+    <input type="text" id="txtAd" placeholder="Adınızı giriniz">
+    <input type="button" value="Say Hello" onclick="sayHello2Click()">
+    <input type="button" value="Say Hello" onclick="sayHello3Click()">
+    
+    
+    <script>
+        // global variable
+
+        //event function
+        function sayHello2Click(){
+            const ad = document.querySelector('#txtAd').value;
+            sayHello2(ad);
+        }
+
+        function sayHello3Click(){
+            const ad = document.querySelector('#txtAd').value;
+            const sonuc = sayHello3(ad);
+            alert(sonuc);
+        }
+
+
+
+
+
+        function sayHello(){
+            alert("Hello");
+        }
+
+        function sayHello2(isim){
+            //...
+            alert(`Hello ${isim}`);
+        }
+
+        function sayHello3(isim){
+            const helloStr = `Hello ${isim}`;
+
+            return helloStr;
+        }
+
+     /*    sayHello2("Ali");
+        sayHello2("Ayşe");
+        sayHello2("Fatma");
+ */
+
+    </script>
+</body>
+</html>

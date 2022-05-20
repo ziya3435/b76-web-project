@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .darkMode{
+        background-color: black;
+        color: white;
+      }
+
+    </style>
+
+  </head>
+  <body>
+   
+    <input type="button" id="btnMod" value="Dark Mode" onclick="modDegis()">
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, explicabo consectetur tempore dolorum repellat nihil sed voluptas nobis nulla vitae. Facere, exercitationem omnis repudiandae facilis nihil voluptates fuga quasi pariatur.
+    Consectetur voluptate repudiandae officiis, consequuntur ratione iure illum id dolore, rerum et, quia sed? Quasi asperiores nobis labore explicabo, eius tenetur, assumenda quo cum blanditiis cupiditate numquam repellat voluptatibus sint!
+    Amet, debitis provident! Deserunt dolor quaerat maiores repellendus? Nulla, architecto? Ducimus explicabo error sed unde amet sapiente qui commodi suscipit, fuga, illum voluptas? Quia beatae unde magnam quasi ex praesentium.
+    Magni quos odio tempora sunt! Non optio perferendis quia nesciunt culpa eaque perspiciatis inventore officiis mollitia! Maiores perferendis mollitia, soluta excepturi magnam doloribus labore consectetur laudantium fugit doloremque nostrum esse?
+    Officiis, alias ab quae quaerat excepturi asperiores sequi eveniet facilis, laboriosam assumenda illo corrupti minima? Rem, unde debitis. Totam atque vero molestiae, ex maxime numquam reiciendis laborum ducimus. Quibusdam, quidem.</p>
+
+    <script>
+      let mod = "light";
+
+      function modDegis(){
+        if(mod == "light"){
+          document.querySelector("body").classList.add("darkMode");
+          document.querySelector("#btnMod").value = "Light Mode";
+          mod = "dark";
+        }
+        else{
+          document.querySelector("body").classList.remove("darkMode");
+          document.querySelector("#btnMod").value = "Dark Mode";
+          mod = "light";  
+        }
+          
+        
+      }
+
+
+       
+
+    </script>
+  </body>
+</html>

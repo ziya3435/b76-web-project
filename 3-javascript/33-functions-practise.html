@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txtUstLimit">
+    <input type="text" id="txtBolum">
+    <input type="button" value="Hesapla" onclick="clickHesapla()">
+
+    <script>
+
+        function clickHesapla(){
+            const txtUstLimit = document.querySelector("#txtUstLimit").value;
+            const txtBolum = document.querySelector("#txtBolum").value;
+
+            const sonuc = hesapla(txtUstLimit, txtBolum);
+
+            alert(`1 ile ${txtUstLimit} arasında ${txtBolum} ile tam bölünebilen ${sonuc} adet sayı var.`);
+        }
+
+
+        function hesapla(ustLimit, bolum){
+            let adet = 0;
+
+            for(let i=1; i<= ustLimit; i++){
+                if(i%bolum == 0) {
+                    adet++;
+                }
+            }
+
+            return adet;
+        }
+    </script>
+</body>
+</html>

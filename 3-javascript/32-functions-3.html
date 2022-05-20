@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Bir sayı giriniz" id="txtSayi">
+    <input type="button" id="btnHesapla" value="Faktoriyel Hesapla" onclick="clickHesapla()">
+
+
+    <script>
+        function clickHesapla(){
+            const sayi = document.querySelector("#txtSayi").value;
+            const sonuc = faktoriyel(sayi);
+
+            if(!sonuc){
+                alert("Lütfen sıfırdan büyük bir sayı giriniz");
+                return;
+            }
+
+            alert(sonuc);
+
+        }
+
+        function faktoriyel(sayi){
+            if(!sayi || isNaN(sayi) || sayi<0) return false;
+
+            let carpim = 1;
+
+            while(sayi>0){
+                carpim *= sayi;
+                sayi--;
+            }
+
+            return carpim;
+
+        }
+
+
+    </script>
+
+</body>
+</html>

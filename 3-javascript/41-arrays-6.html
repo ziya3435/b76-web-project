@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="button" value="Hesapla" onclick="clickHesapla()">
+
+
+    <script>
+        
+
+        function clickHesapla(){
+            const dizi = [12,43,65,23,56,121,45,11,45,7,87];
+            const average = getAverage(dizi); // 48
+            const count = getCount(dizi, average); 
+            alert(`Dizinin içinde oratala değer olan ${average} dan küçük olan ${count} adet eleman var`);
+
+        }
+
+        function getCount(arr, ref){
+            let count = 0;
+            for(let i=0; i<arr.length; i++){
+                if(arr[i]<ref) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+
+        function getAverage(arr){
+            let avg = 0;
+            for(let i=0; i<arr.length; i++){
+                avg += arr[i];
+            }
+            avg = (avg / arr.length).toFixed(2);
+            return avg;
+        }
+
+
+
+    </script>
+</body>
+</html>

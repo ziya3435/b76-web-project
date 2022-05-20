@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="txtBaslangic" min="0" placeholder="Başlangıç sayısını giriniz">
+    <input type="number" id="txtHedef" min="0" placeholder="Hedefi giriniz">
+    
+    <input type="button" value="Hesapla" onclick="hesapla()">
+
+    <h3 id="sonuc"></h3>
+
+    <script>
+        function hesapla(){
+            //100 + 101 +102 + ....+ n >= 2000
+            let baslangic = Number(document.querySelector("#txtBaslangic").value);
+            let hedef = Number(document.querySelector("#txtHedef").value);
+
+            let toplam = 0;
+            let adet = 0;
+
+            while(toplam<hedef){
+                toplam += baslangic;
+                baslangic++;
+                adet++;
+            }
+            
+
+            document.querySelector("#sonuc").innerText = `Toplamı ${toplam} değerine ulaştıran ${adet} adet sayı var.`;
+            
+        }
+    </script>
+</body>
+</html>

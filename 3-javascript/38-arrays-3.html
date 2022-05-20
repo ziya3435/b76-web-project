@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Test1" onclick="test1()">
+    <input type="button" value="Test2" onclick="test2()">
+
+    <script>
+        
+
+        function test1(){
+            const sayilar = [12,45,22,65,78,33,67,89,23];
+            const sonuc = getMaxNumber(sayilar);
+            alert(sonuc);
+        }
+
+        function test2(){
+            const notlar = [67,23,77,99,67,21];
+            const sonuc = getMaxNumber(notlar);
+            alert(sonuc);
+        }
+
+        function getMaxNumber(dizi){
+            let maxNumber = dizi[0];
+
+            for(let i=1; i<dizi.length; i++){
+                if(maxNumber<dizi[i]){
+                    maxNumber = dizi[i];
+                }
+            }
+
+            return maxNumber;
+
+        }
+
+
+    </script>
+</body>
+</html>

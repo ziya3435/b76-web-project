@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="txtSayi1" min="0">
+    <input type="number" id="txtSayi2" min="0">
+    
+    <input type="button" value="Hesapla" onclick="hesapla()">
+
+    <h3 id="sonuc"></h3>
+
+    <script>
+        function hesapla(){
+            let sayi1 = Number(document.querySelector("#txtSayi1").value);
+            let sayi2 = Number(document.querySelector("#txtSayi2").value);
+
+            let adet7 = 0;
+            let adet3 = 0;
+
+            for(let i=sayi1; i<=sayi2; i++){
+                if(i%7 == 0){
+                    console.log(`${i}/7`);
+                    adet7++;
+                }
+
+                if(i%3 == 0){
+                    console.log(`${i}/3`);
+                    adet3++;
+                }
+            }
+
+            document.querySelector("#sonuc").innerText = `7 ile tam bölünebilen ${adet7}, 3 ile tam bölünebilen ${adet3} adet sayı var.`;
+            
+        }
+    </script>
+</body>
+</html>

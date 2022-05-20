@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const sayilar = [12,45,22,65,78,33,67,89,23];
+        let toplam = 0;
+
+        console.log("i,sayi,toplam");
+
+        // FOR DÖNGÜSÜ İLE
+        for(let i=0; i<sayilar.length; i++){
+            toplam += sayilar[i];
+            console.log(i, sayilar[i], toplam);
+        }
+
+        //WHILE DÖNGÜSÜ İLE
+        let k = 0;
+        toplam = 0;
+        while(k<sayilar.length){
+            toplam += sayilar[k];
+            k++;
+        }
+
+
+        console.log(`Toplam:${toplam}`);
+
+
+    </script>
+</body>
+</html>

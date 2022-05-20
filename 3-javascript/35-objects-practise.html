@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="number" id="txtVize">
+    <input type="number" id="txtFinal">
+    <input type="button" value="Hesapla" onclick="hesapla()">
+
+    <script>
+
+        function hesapla(){
+            const vize = document.querySelector("#txtVize").value;
+            const final = document.querySelector("#txtFinal").value;
+
+            if(!vize || isNaN(vize) || vize<0 || vize > 100){
+                alert("Geçerli bir vize notu giriniz.");
+                return;
+            }
+
+            if(!final || isNaN(final) || final<0 || final > 100){
+                alert("Geçerli bir final notu giriniz.");
+                return;
+            }
+
+            let ortalama = vize*0.3 + final*0.8;
+
+            const notlar = {};
+
+            notlar.vize = vize;
+            notlar.final = final;
+            notlar.ort = ortalama;
+
+            console.log(notlar);
+
+
+            
+
+        }
+
+
+    </script>
+</body>
+</html>

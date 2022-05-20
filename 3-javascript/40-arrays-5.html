@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Test1" onclick="test1()">
+    <input type="button" value="Test2" onclick="test2()">
+
+    <script>
+        
+
+        function test1(){
+            const sayilar = [12,45,22,65,78,33,67,89,23];
+            const max = getMaxNumber(sayilar);
+            const min = getMinNumber(sayilar);
+            alert(`En büyük sayı ${max} ile en küçük sayı ${min} arasındaki fark: ${max-min}`);
+        }
+
+        function test2(){
+            const notlar = [67,23,77,99,67,21];
+            const max = getMaxNumber(notlar);
+            const min = getMinNumber(notlar);
+            alert(`En büyük sayı ${max} ile en küçük sayı ${min} arasındaki fark: ${max-min}`);
+        }
+
+        function getMaxNumber(dizi){
+            let maxNumber = dizi[0];
+
+            for(let i=1; i<dizi.length; i++){
+                if(maxNumber<dizi[i]){
+                    maxNumber = dizi[i];
+                }
+            }
+
+            return maxNumber;
+
+        }
+
+
+        function getMinNumber(dizi){
+            let minNumber = dizi[0];
+
+            for(let i=1; i<dizi.length; i++){
+                if(minNumber>dizi[i]){
+                    minNumber = dizi[i];
+                }
+            }
+
+            return minNumber;
+
+        }
+
+
+    </script>
+</body>
+</html>

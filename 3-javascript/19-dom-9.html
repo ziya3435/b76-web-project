@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="txtSayi1"> +
+    <input type="number" id="txtSayi2">
+    <input type="button" id="btnTopla" value="Topla" onclick="topla()">
+    <label id="lblSonuc"></label>
+
+    <script>
+        function topla(){
+            const sayi1 = document.querySelector("#txtSayi1");
+            const sayi2 = document.querySelector("#txtSayi2");
+            const sonuc = document.querySelector("#lblSonuc");
+
+            sonuc.innerHTML = "Sonuç:" + (Number(sayi1.value) + Number(sayi2.value));
+
+        }
+    </script>
+</body>
+</html>

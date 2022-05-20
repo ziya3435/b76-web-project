@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="baslikSehirler" class="baslik">Şehirler</h1>
+    <ul id="liste">
+        <li>Ankara</li>
+        <li>İstanbul</li>
+        <li class="list-item">İzmir</li>
+    </ul>
+    <h1 id="baslikUlkeler" class="baslik">Ülkeler</h1>
+
+    <script>
+        const el1 = document.querySelector("#baslikUlkeler");
+        console.log(el1);
+
+        const el2 = document.querySelector("#liste li");
+        console.log(el2);
+
+        const el3 = document.querySelector(".list-item");
+        console.log(el3);
+
+        const el4 = document.querySelectorAll("#liste li");
+        console.log(el4);
+
+        const el5 = document.querySelector("#liste li:nth-child(2)");
+        console.log(el5);
+    </script>
+
+</body>
+</html>
